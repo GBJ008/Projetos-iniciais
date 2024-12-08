@@ -14,12 +14,12 @@ navegador = webdriver.Chrome(service=servico)
 wait =  WebDriverWait(navegador,10)
 # Entrada na pag
 navegador.get('https://app.plugestoque.com.br/auth')
-# colocando o Login e senha
-navegador.find_element('xpath','/html/body/app-root/app-auth/div/div/form/div[1]/input-default/div/input').send_keys('lekantatransportes@hotmail.com')
-
-navegador.find_element('xpath','/html/body/app-root/app-auth/div/div/form/div[2]/input-default/div/input').send_keys('1234')
+#Login 
+navegador.find_element('xpath','/html/body/app-root/app-auth/div/div/form/div[1]/input-default/div/input').send_keys('')
+# senha 
+navegador.find_element('xpath','/html/body/app-root/app-auth/div/div/form/div[2]/input-default/div/input').send_keys('')
 # clicando no botão
-c=wait.until(navegador.find_element('xpath','/html/body/app-root/app-auth/div/div/form/button-spinner/button').click())
+wait.until(navegador.find_element('xpath','/html/body/app-root/app-auth/div/div/form/button-spinner/button').click())
 
 navegador.find_element('xpath','/html/body/app-root/layout-base/nav/div/div[1]/button').click()
 
